@@ -12,6 +12,7 @@ public class User {
     private String lastName;
     private String email;
     private int role;
+    private Reimbursement reimbursement;
 
     //constructor
 
@@ -83,6 +84,14 @@ public class User {
 
     public void setRole(int role) {
         this.role = role;
+    }
+
+    public Reimbursement getReimbursement() {
+        return reimbursement;
+    }
+
+    public void setReimbursement(Reimbursement reimbursement) {
+        this.reimbursement = reimbursement;
     }
 
     @Override
