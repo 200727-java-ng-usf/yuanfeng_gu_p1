@@ -12,7 +12,7 @@
 
 ------------------------------------------------------------------------------
 
-### Aug 29 update
+### Aug 30 update
 ### Repository and Service layer 
 
 ###### 1.  Set up Database(postgreSQL) 
