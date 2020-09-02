@@ -9,3 +9,11 @@
 ###### 2.  add .properties file for database connection
 ###### 3.  created ConnectionFactory in util folder and tested 
 ###### 4.  created models folder to store the User and Reimbursement POJO 
+
+------------------------------------------------------------------------------
+
+### Aug 30 update
+### Repository and Service layer 
+
+###### 1.  Set up Database(postgreSQL) 
+###### 2.  Created UserRepo (keep working on Repository layer)
