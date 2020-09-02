@@ -37,8 +37,8 @@ public class ConnectionFactory {
                 // Force the JVM to load the PostGreSQL JDBC driver
                 Class.forName("org.postgresql.Driver");
 
-                conn = DriverManager.getConnection(newProperties.getProperty("url"),newProperties.getProperty("username"),
-                        newProperties.getProperty("password"));
+                conn = DriverManager.getConnection("jdbc:postgresql://java-ng-usf-200727.cwdevtt9ruq7.us-east-2.rds.amazonaws.com:5432/postgres","postgres",
+                        "fake password");
 
             } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();

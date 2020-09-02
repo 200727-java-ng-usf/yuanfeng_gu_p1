@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./CSS/bootstrap.css">
+    <title>Login</title>
+</head>
+<body>
+
+<fieldset>
+    <legend>Login</legend>
+    <form action="/myExpenseReimbursementSystem/Login" method="POST">
+        Login Type: <label for="emp">Employee </label><input type="radio" id="emp" name="usertype" value="Employee" checked>
+                    <label for="man">Manager </label><input type="radio" id="man" name="usertype" value="Manager">
+                    <label for="adm">Admin </label><input type="radio" id="adm" name="usertype" value="Admin"><br>
+        Username: <input class="form-control" type="text" name="username">
+        Password: <input class="form-control" type="password" name="password"><br>
+        <input type="submit" value="Login">
+        &nbsp;&nbsp;&nbsp;
+
+    </form>
+</fieldset>
+
+
+</body>
+</html>

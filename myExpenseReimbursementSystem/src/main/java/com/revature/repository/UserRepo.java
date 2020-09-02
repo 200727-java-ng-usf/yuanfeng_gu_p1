@@ -4,6 +4,7 @@ import com.revature.models.User;
 import com.revature.util.ConnectionFactory;
 
 
+
 import java.sql.*;
 import java.util.HashSet;
 import java.util.Optional;
@@ -18,7 +19,7 @@ public class UserRepo {
         Optional<User> _user = Optional.empty();
         try(Connection conn = ConnectionFactory.getInstance().getConnection()){
 
-            String sql = "select  * from ers_users eu WHERE username = ? AND password = ?";
+            String sql = "select  * from \"reimbursementSys\".ers_users WHERE username = ? AND password = ?";
 
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
@@ -149,6 +150,21 @@ public class UserRepo {
         }
 
         return _user;
+    }
+
+
+    public void deleteUser(String username){
+        boolean success = false;
+        try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
+
+            String sql = "delete from ers_users eu where username = ? ";
+            PreparedStatement psmt = conn.prepareStatement(sql);
+            psmt.setString(1, username);
+            psmt.execute();
+
+        }catch (SQLException sqle) {
+                sqle.printStackTrace();
+            }
     }
 
 
