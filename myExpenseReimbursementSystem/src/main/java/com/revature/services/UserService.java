@@ -6,7 +6,9 @@ import com.revature.repository.UserRepo;
 
 import com.revature.exceptions.*;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 public class UserService {
 
@@ -29,17 +31,37 @@ public class UserService {
         return authenticateUser;  // return authenticateUser
     }
 
-    public User findUserByUsername(String username)throws AuthenticationException, InvalidRequestException {
+    public User findUserByUsername(String username) throws AuthenticationException, InvalidRequestException {
         if (username == null || username.trim().equals("")) {
             throw new InvalidRequestException("Invalid username provide ! ");
         }
 
         User targetUser = userRepo.findUserByUsername(username).orElseThrow(AuthenticationException::new);
 
-        return  targetUser;
+        return targetUser;
     }
 
-    public void addUser(User newUser){
+
+
+    public Set<User> findUserByRole(String role) throws InvalidRequestException {
+        if (role == null || role.trim().equals("")) {
+            throw new InvalidRequestException("Invalid role provide ! ");
+        }
+
+        Set<User> targetUsers = new HashSet<>();
+        targetUsers = userRepo.findRole(role);
+        return targetUsers;
+    }
+
+    public void addUser(User newUser) {
         userRepo.save(newUser);
+    }
+
+    public void deleteUser(String username){
+        userRepo.deleteUser(username);
+    }
+
+    public void editUser(String username,String password,String email,int role,int id){
+        userRepo.editUser(username,password,email, role, id);
     }
 }

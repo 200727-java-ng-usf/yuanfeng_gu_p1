@@ -22,17 +22,15 @@ public class Reimbursement {
     public Reimbursement() {
     }
 
-    public Reimbursement(int reimbId, double amount, Timestamp dateSubmitted,Timestamp resolvedDate,String description,
-                         int authorId, int resolverId, int statusId, int typeId) {
-        this.reimbId = reimbId;
+    public Reimbursement(double amount,String description,
+                         int authorId, int statusId, int typeId) {
+
         this.amount = amount;
         this.description = description;
         this.authorId = authorId;
-        this.resolverId = resolverId;
         this.statusId = statusId;
         this.typeId = typeId;
-        this.dateSubmitted = dateSubmitted;
-        this.resolvedDate = resolvedDate;
+
     }
 
     public int getReimbId() {

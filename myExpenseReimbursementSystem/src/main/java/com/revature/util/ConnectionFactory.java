@@ -16,11 +16,7 @@ public class ConnectionFactory {
         private Properties newProperties = new Properties();
 
         private ConnectionFactory(){
-            try {
-                newProperties.load(new FileReader("src/main/resources/key.properties"));
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+
         }
 
 
@@ -38,7 +34,7 @@ public class ConnectionFactory {
                 Class.forName("org.postgresql.Driver");
 
                 conn = DriverManager.getConnection("jdbc:postgresql://java-ng-usf-200727.cwdevtt9ruq7.us-east-2.rds.amazonaws.com:5432/postgres","postgres",
-                        "fake password");
+                        "AKO.ako.001");
 
             } catch (ClassNotFoundException | SQLException e) {
                 e.printStackTrace();
