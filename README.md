@@ -17,3 +17,12 @@
 
 ###### 1.  Set up Database(postgreSQL) 
 ###### 2.  Created UserRepo (keep working on Repository layer)
+
+
+---------------------------------------------------------------------
+
+### Sep 01 update
+### web and servlet
+
+###### 1.  Login function completed 
+###### 2.  Three role's home page 
