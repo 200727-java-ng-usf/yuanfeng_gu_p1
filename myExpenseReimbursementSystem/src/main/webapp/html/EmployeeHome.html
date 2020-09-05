@@ -9,7 +9,43 @@
 
 <h1>This is the Employee home screen!! </h1>
 
+<h1>My Reimbursement Requests</h1>
 
+<div>
+    Select view:
+    <select onchange="changeView(this.value)">
+        <option value="ShowAll">View all Requests</option>
+        <option value="ShowPending">View only Pending Requests</option>
+        <option value="ShowResolved">View only Resolved Requests</option>
+    </select>
+</div>
+<br>
+
+<table id="reqTable" class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th>Request Date</th>
+        <th>Expense Date</th>
+        <th>Request Amount</th>
+        <th>Request Description</th>
+        <th>Request Status</th>
+        <th>Resolved By</th>
+    </tr>
+    </thead>
+    <tbody id="reqTableBody">
+    </tbody>
+</table>
+
+
+<form method="get" action="EmployeeAddReimbursement.html">
+    <button type="submit"><h3>Add new Reimbursement</h3></button>
+</form><br><br>
+
+
+<script src="../js/EmployeeView.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 </body>
 </html>

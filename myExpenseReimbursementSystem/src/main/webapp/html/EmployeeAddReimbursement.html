@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+
+<h1>Submit a Reimbursement Request</h1>
+
+<fieldset class="form-group" style="margin-left:20px">
+    <form action="../SubmitReimbursement" method="POST" enctype="multipart/form-data">
+        Reimbursement Type:<br>
+        <input type="radio" id="lodging" name="reimbursementType" value="lodging" checked>&nbsp;<label for="lodging">Lodging </label><br>
+        <input type="radio" id="travel" name="reimbursementType" value="travel">&nbsp;<label for="travel">Travel</label><br>
+        <input type="radio" id="food" name="reimbursementType" value="food">&nbsp; <label for="food">Food</label><br>
+        <input type="radio" id="other" name="reimbursementType" value="other">&nbsp; <label for="other">Other</label><br>
+        </div><br><br>
+        Reimbursement Amount Requested:<br> $<input type="number" min="0.00" step="0.01" name="amount"><br>
+        Description of Expense (150 character limit):<br> <textarea maxlength="150" name="description" rows="4" cols="50"></textarea><br>
+        <input type="submit">
+    </form>
+</fieldset>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

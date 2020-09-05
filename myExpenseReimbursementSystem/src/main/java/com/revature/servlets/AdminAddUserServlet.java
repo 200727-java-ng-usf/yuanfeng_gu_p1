@@ -44,7 +44,7 @@ public class AdminAddUserServlet extends HttpServlet {
         newUser.setRole(role);
         newUser.setEmail(req.getParameter("email"));
 
-       // userService.addUser(newUser);
+        userService.addUser(newUser);
 
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
