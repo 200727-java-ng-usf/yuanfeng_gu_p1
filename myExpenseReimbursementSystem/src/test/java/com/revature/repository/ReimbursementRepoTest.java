@@ -35,70 +35,70 @@ public class ReimbursementRepoTest {
 
     }
 
-    @Test
-    public void findAllReimbursements() {
-       reimbursementsSet = testRepo.findAllReimbursements();
-
-       for(Reimbursement r:reimbursementsSet){
-           System.out.println(r);
-       }
-    }
-
-    @Test
-    public void findReimbursementByReimbId() {
-
-        testReimbursement = testRepo.findReimbursementByReimbId(1).get();
-        System.out.println(testReimbursement.getAmount());
-    }
-
-    @Test
-    public void getPendingReimbursements() {
-        reimbursementsSet = testRepo.getPendingReimbursements();
-
-        for(Reimbursement r:reimbursementsSet){
-            System.out.println(r);
-        }
-
-    }
-
-    @Test
-    public void getResolvedReimbursements() {
-    }
-
-    @Test
-    public void findAllReimbursementsForIndividual() {
-
-        reimbursementsSet = testRepo.findAllReimbursementsForIndividual(1);
-        for(Reimbursement r:reimbursementsSet){
-            System.out.println(r);
-        }
-
-    }
-
-    @Test
-    public void findAllPendingReimbursementsForIndividual() {
-        reimbursementsSet = testRepo.findAllPendingReimbursementsForIndividual(1);
-        for(Reimbursement r:reimbursementsSet){
-            System.out.println(r);
-        }
-    }
-
-    @Test
-    public void findAllResolvedReimbursementsForIndividual() {
-    }
-
-
-    @Test
-    public void addReimbursement() {
-
-        testRepo.addReimbursement(new Reimbursement(500.00,"travel around",4,2,2));
-        assertEquals(500.00,500.00,testReimbursement.getAmount());
-    }
-
-    @Test
-    public void approveReimbursement() {
-        testRepo.approveReimbursement(4,1,1);
-        testReimbursement = testRepo.findReimbursementByReimbId(1).get();
-        System.out.println(testReimbursement);
-    }
+//    @Test
+//    public void findAllReimbursements() {
+//       reimbursementsSet = testRepo.findAllReimbursements();
+//
+//       for(Reimbursement r:reimbursementsSet){
+//           System.out.println(r);
+//       }
+//    }
+//
+//    @Test
+//    public void findReimbursementByReimbId() {
+//
+//        testReimbursement = testRepo.findReimbursementByReimbId(1).get();
+//        System.out.println(testReimbursement.getAmount());
+//    }
+//
+//    @Test
+//    public void getPendingReimbursements() {
+//        reimbursementsSet = testRepo.getPendingReimbursements();
+//
+//        for(Reimbursement r:reimbursementsSet){
+//            System.out.println(r);
+//        }
+//
+//    }
+//
+//    @Test
+//    public void getResolvedReimbursements() {
+//    }
+//
+//    @Test
+//    public void findAllReimbursementsForIndividual() {
+//
+//        reimbursementsSet = testRepo.findAllReimbursementsForIndividual(1);
+//        for(Reimbursement r:reimbursementsSet){
+//            System.out.println(r);
+//        }
+//
+//    }
+//
+//    @Test
+//    public void findAllPendingReimbursementsForIndividual() {
+//        reimbursementsSet = testRepo.findAllPendingReimbursementsForIndividual(1);
+//        for(Reimbursement r:reimbursementsSet){
+//            System.out.println(r);
+//        }
+//    }
+//
+//    @Test
+//    public void findAllResolvedReimbursementsForIndividual() {
+//    }
+//
+//
+//    @Test
+//    public void addReimbursement() {
+//
+//        testRepo.addReimbursement(new Reimbursement(500.00,"travel around",4,2,2));
+//        assertEquals(500.00,500.00,testReimbursement.getAmount());
+//    }
+//
+//    @Test
+//    public void approveReimbursement() {
+//        testRepo.approveReimbursement(4,1,1);
+//        testReimbursement = testRepo.findReimbursementByReimbId(1).get();
+//        System.out.println(testReimbursement);
+//    }
 }

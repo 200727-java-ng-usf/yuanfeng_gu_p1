@@ -41,6 +41,11 @@ public class UserService {
         return targetUser;
     }
 
+    public Set<User> findAllUser(){
+
+        return  userRepo.findAllUsers();
+    }
+
 
 
     public Set<User> findUserByRole(String role) throws InvalidRequestException {

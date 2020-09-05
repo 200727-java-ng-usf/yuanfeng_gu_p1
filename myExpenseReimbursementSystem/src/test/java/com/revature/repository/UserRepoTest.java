@@ -31,64 +31,62 @@ public class UserRepoTest {
         testRepo = null;
         testUser2 =null;
     }
-
-    @Test
-    public void findUserByCredentials() {
-
-        testUser = testRepo.findUserByCredentials("gu8", "8888").get();
-        assertEquals(2,testUser.getRole());
-    }
-
-    @Test
-    public void findUserByUsername() {
-        testUser = testRepo.findUserByUsername("effie").get();
-        assertEquals(2,testUser.getRole());
-    }
-
-    @Test
-    public void findUserRoleId() {
-        userSet = testRepo.findUserRoleId(2);
-        for(User user:userSet){
-            System.out.println(user);
-        }
-    }
-
-    @Test
-    public void findAllUsers() {
-        userSet = testRepo.findAllUsers();
-        for(User user:userSet){
-            System.out.println(user);
-        }
-
-    }
-
-    @Test
-    public void save() {
-        testRepo.save(new User("tony","1111","tony","parker","tony.parker@hotmail.com",1));
-    }
-
-    @Test
-    public void findRole() {
-        userSet = testRepo.findRole("employee");
-        for(User user:userSet){
-            System.out.println(user);
-        }
-    }
-
-    @Test
-    public void deleteUser() {
-        testRepo.deleteUser("tony");
-    }
-
-    @Test
-    public void editUser() {
-
-
-        testRepo.editUser("testUser","password","testuser@gmail.com",2,4);
-
-
-
-
-
-    }
+//
+//    @Test
+//    public void findUserByCredentials() {
+//
+//        testUser = testRepo.findUserByCredentials("gu8", "8888").get();
+//        assertEquals(2,testUser.getRole());
+//    }
+//
+//    @Test
+//    public void findUserByUsername() {
+//        testUser = testRepo.findUserByUsername("effie").get();
+//        assertEquals(2,testUser.getRole());
+//    }
+//
+//    @Test
+//    public void findUserRoleId() {
+//        userSet = testRepo.findUserRoleId(2);
+//        for(User user:userSet){
+//            System.out.println(user);
+//        }
+//    }
+//
+//    @Test
+//    public void findAllUsers() {
+//        userSet = testRepo.findAllUsers();
+//        for(User user:userSet){
+//            System.out.println(user);
+//        }
+//
+//    }
+//
+//    @Test
+//    public void save() {
+//        testRepo.save(new User("tony","1111","tony","parker","tony.parker@hotmail.com",1));
+//    }
+//
+//    @Test
+//    public void findRole() {
+//        userSet = testRepo.findRole("employee");
+//        for(User user:userSet){
+//            System.out.println(user);
+//        }
+//    }
+//
+//    @Test
+//    public void deleteUser() {
+//        testRepo.deleteUser("tony");
+//    }
+//
+//    @Test
+//    public void editUser() {
+//
+//
+//        testRepo.editUser("testUser","password","testuser@gmail.com",2,4);
+//
+//
+//
+//    }
 }

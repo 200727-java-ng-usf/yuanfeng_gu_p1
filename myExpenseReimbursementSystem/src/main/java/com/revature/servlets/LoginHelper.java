@@ -40,7 +40,7 @@ public class LoginHelper {
 
             HttpSession session = req.getSession();
             session.setAttribute("user", username);
-            session.setAttribute("userType", password);
+            session.setAttribute("userType", type);
             // expiry in 20 mins
             session.setMaxInactiveInterval(20 * 60);
             resp.sendRedirect("html/AdminHome.html");
@@ -56,7 +56,7 @@ public class LoginHelper {
         } else if (type.equals("Employee") && role == 2) {
             HttpSession session = req.getSession();
             session.setAttribute("user", username);
-            session.setAttribute("userType", password);
+            session.setAttribute("userType", type);
             session.setMaxInactiveInterval(20 * 60);
             resp.sendRedirect("html/EmployeeHome.html");
         } else {
