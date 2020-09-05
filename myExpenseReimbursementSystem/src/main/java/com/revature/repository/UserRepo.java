@@ -193,6 +193,26 @@ public class UserRepo {
     }
 
 
+    public Optional<User> findUserById(int id){
+        Optional<User> _user = Optional.empty();
+
+        try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
+
+            String sql = "select  * from \"reimbursementSys\".ers_users eu WHERE ers_user_id = ?";
+            PreparedStatement pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1,id);
+
+            ResultSet rs = pstmt.executeQuery();
+            _user = mapResultSet(rs).stream().findFirst();
+
+        } catch (SQLException sqle) {
+            sqle.printStackTrace();
+        }
+
+        return _user;
+    }
+
+
 
 
 

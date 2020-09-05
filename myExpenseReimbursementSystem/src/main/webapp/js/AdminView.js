@@ -27,7 +27,6 @@ const display = (xhr) => {
 
 requestArr = JSON.parse(xhr.responseText);
 
-console.log(requestArr);
 
 let table = document.getElementById("empTable");
 	table.removeChild(document.getElementById("empList"));

@@ -2,16 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <title>EditUser</title>
+
 </head>
 <body>
 
+<h2>Edit User Account</h2>
 
-<h2>Register New User Account</h2>
-<fieldset>
+
+
+<form action="/myExpenseReimbursementSystem/AdminEditUser" method="GET">
+    Employeen ID : <input class="form-control" name="id"><br>
+    <input type="submit">
+</form>
+
+
+
+
+
     <fieldset class="form-group" style="margin-left:20px">
-        <form action="/myExpenseReimbursementSystem/AdminAddUser" method="POST">
+        <form action="/myExpenseReimbursementSystem/AdminEditUser" method="POST">
             First Name:<br> <input type="text" name="firstname" required><br>
             Last Name:<br> <input type="text" name="lastname" required><br>
             User Name:<br> <input type="text" id="username" name="username" onchange="checkDuplicate(this.value)" required> <span id="dupeCheck"></span><br>
@@ -28,13 +38,10 @@
 
 
     </fieldset>
-</fieldset>
 
-
-
+<script src="../js/AdminViewById.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
 </body>
 </html>
