@@ -26,3 +26,12 @@
 
 ###### 1.  Login function completed 
 ###### 2.  Three role's home page 
+
+
+-------------------------------------------------------------------------
+
+### Sep 04 update
+### Html and Css
+
+###### 1. Admin view and add new User function completed 
+###### 2. All repo and services completed
