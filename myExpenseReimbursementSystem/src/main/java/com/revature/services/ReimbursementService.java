@@ -13,6 +13,7 @@ public class ReimbursementService {
         reimbursementRepo = new ReimbursementRepo();
     }
 
+
     public Set<Reimbursement> findAllReimbursements(){
 
         return reimbursementRepo.findAllReimbursements();
@@ -37,6 +38,16 @@ public class ReimbursementService {
         reimbursementRepo.addReimbursement(reimbursement);
     }
 
+    public Set<Reimbursement> getPendingReimbursements(){
+        return reimbursementRepo.getPendingReimbursements();
+    }
 
+    public Set<Reimbursement> getResolvedReimbursements(){
+        return reimbursementRepo.getResolvedReimbursements();
+    }
+
+    public void decisionOfReimbursement(int resolverId,int statusId,int reimbId ) {
+        reimbursementRepo.decisionOfReimbursement(resolverId,statusId,reimbId);
+    }
 
 }

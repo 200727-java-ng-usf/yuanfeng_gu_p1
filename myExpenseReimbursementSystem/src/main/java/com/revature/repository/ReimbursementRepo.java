@@ -191,7 +191,7 @@ public class ReimbursementRepo {
     }
 
 
-    public void approveReimbursement(int resolverId,int statusId,int reimbId ) {
+    public void decisionOfReimbursement(int resolverId,int statusId,int reimbId ) {
 
         try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
 

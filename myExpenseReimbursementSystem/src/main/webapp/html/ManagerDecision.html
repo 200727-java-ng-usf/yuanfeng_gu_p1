@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ManagerDecision</title>
+</head>
+<body>
+
+<h1>All Pending Reimbursement Requests</h1>
+
+<table id="reqTable" class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+        <th>Reimbursement ID</th>
+        <th>Request Date</th>
+        <th>Expense Date</th>
+        <th>Request Amount</th>
+        <th>Request Description</th>
+        <th>Request Status</th>
+        <th>Resolved By</th>
+    </tr>
+    </thead>
+    <tbody id="reqTableBody">
+    </tbody>
+</table>
+
+<form action="/myExpenseReimbursementSystem/ManagerDecision" method="POST">
+    Reimbursement ID : <input class="form-control" name="id"><br>
+
+    Decision:<br>
+    <input type="radio" id="approve" name="decision" value="approve" checked>&nbsp;<label for="approve">Approve </label><br>
+    <input type="radio" id="deny" name="decision" value="deny">&nbsp;<label for="deny">Deny</label><br>
+    </div><br><br>
+    <input type="submit">
+</form>
+
+
+
+
+<script src="../js/PendingReim.js"></script>
+</body>
+</html>
