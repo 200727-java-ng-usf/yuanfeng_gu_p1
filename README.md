@@ -46,3 +46,14 @@
 
 ###### 1. view all reim by individual user sorted by status 
 ###### 2. User can add new reim request 
+
+
+-----------------------------------------------------------------------------------
+
+### Sep 06 update
+### Version 0.8 Completed
+
+###### 1. All functions works and tested  
+###### 2. some details still need be optimized
+###### 3. need Css and bootstrap
+
