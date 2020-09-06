@@ -34,4 +34,15 @@
 ### Html and Css
 
 ###### 1. Admin view and add new User function completed 
+###### 2. Admin can edit User info by Enter Id number
 ###### 2. All repo and services completed
+
+
+
+-----------------------------------------------------------------------------------
+
+### Sep 05 update
+### Employee Part Completed
+
+###### 1. view all reim by individual user sorted by status 
+###### 2. User can add new reim request 
