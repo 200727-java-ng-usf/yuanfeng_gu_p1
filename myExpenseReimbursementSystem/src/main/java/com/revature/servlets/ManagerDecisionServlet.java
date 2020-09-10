@@ -68,25 +68,46 @@ public class ManagerDecisionServlet extends HttpServlet {
         out = resp.getWriter();
 
         if(statusId==1){
-            out.print("<h3> Reimbursement Id "+reimId+"has been Has been approved </h3>");
-            rd = req.getRequestDispatcher("html/ManagerDecision.html");
-            try {
-                rd.include(req, resp);
-            } catch (ServletException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            out.close();
+
+            resp.setContentType("text/html");
+            String title = "Successfully added New Reimbursement ";
+            String goBack = "html/ManagerHome.html";
+
+            String docType = "<!DOCTYPE html> \n";
+            out.println(docType +
+                    "<html>\n" +
+                    "<head><title>" + title + "</title></head>\n" +
+                    "<body bgcolor=\"#3366ff\">\n" +
+                    "<h1 align=\"center\">" + title + "</h1>\n" +
+                    " <h2 align=\"center\">Reimbursement has been Has been approved</h2><\n"+
+                    "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
+                    + reimId + "</h2>\n" +
+
+                    "<form method='get' action="+goBack+">"+
+                    "<button type='submit'><h2>Go back</h2></button>"+
+                    "</form>"+
+                    "</body></html>");
+
         }else {
-            out.print("<h3> Reimbursement Id "+reimId+"has been Has been rejected </h3>");
-            rd = req.getRequestDispatcher("html/ManagerDecision.html");
-            try {
-                rd.include(req, resp);
-            } catch (ServletException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-            out.close();
+
+        resp.setContentType("text/html");
+        String title = "Reimbursement rejected ";
+        String goBack = "html/ManagerHome.html";
+
+        String docType = "<!DOCTYPE html> \n";
+        out.println(docType +
+                "<html>\n" +
+                "<head><title>" + title + "</title></head>\n" +
+                "<body bgcolor=\"#3366ff\">\n" +
+                "<h1 align=\"center\">" + title + "</h1>\n" +
+                " <h2 align=\"center\">Reimbursement has been Has been rejected</h2><\n"+
+                "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
+                + reimId + "</h2>\n" +
+
+                "<form method='get' action="+goBack+">"+
+                "<button type='submit'><h2>Go back</h2></button>"+
+                "</form>"+
+                "</body></html>");
         }
 
 

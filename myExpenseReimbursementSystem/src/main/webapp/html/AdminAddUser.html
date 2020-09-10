@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 </head>
-<body>
+<body class="wrap">
 
 
-<h2>Register New User Account</h2>
-<fieldset>
+<center class="login-title"><h1>Register New User Account</h1></center>
+<fieldset class="container">
     <fieldset class="form-group" style="margin-left:20px">
         <form action="/myExpenseReimbursementSystem/AdminAddUser" method="POST">
             First Name:<br> <input type="text" name="firstname" required><br>
@@ -29,6 +31,12 @@
 
     </fieldset>
 </fieldset>
+
+<center>
+    <div class="container">
+        <form class="login-input" method="get" action="AdminHome.html">
+            <button class="btn btn-primary" type="submit"><h4>Back to Home Screen</h4></button>
+        </form></div></center>
 
 
 

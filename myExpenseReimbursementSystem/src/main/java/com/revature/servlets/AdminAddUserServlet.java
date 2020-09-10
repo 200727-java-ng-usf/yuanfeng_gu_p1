@@ -55,6 +55,7 @@ public class AdminAddUserServlet extends HttpServlet {
         out.println(docType +
                 "<html>\n" +
                 "<head><title>" + title + "</title></head>\n" +
+
                 "<body bgcolor=\"#f0f0f0\">\n" +
                 "<h1 align=\"center\">" + title + "</h1>\n" +
                 "<ul>\n" +

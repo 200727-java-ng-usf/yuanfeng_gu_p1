@@ -75,24 +75,21 @@ public class EmployeeAddReimServlet extends HttpServlet {
         out.println(docType +
                 "<html>\n" +
                 "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#f0f0f0\">\n" +
+                "<body bgcolor=\"#3366ff\">\n" +
                 "<h1 align=\"center\">" + title + "</h1>\n" +
                 "<ul>\n" +
-                "  <li><b>Reimbursement Amount</b>:"
-                + newReimbursement.getAmount() + "\n" +
-                "  <li><b>Reimbursement Type</b>:"
-                + req.getParameter("reimbursementType") + "\n" +
-                "  <li><b>Reimbursement submitted Date</b>:"
-                + newReimbursement.getDateSubmitted() + "\n" +
+                "  <li><b>Reimbursement Amount</b>:<h2>"
+                + newReimbursement.getAmount() + "</h2>\n" +
+                "  <li><b>Reimbursement Type</b>:<h2>"
+                + req.getParameter("reimbursementType") + "</h2>\n" +
+                "  <li><b>Reimbursement submitted Date</b>:<h2>"
+                + newReimbursement.getDateSubmitted() + "</h2>\n" +
                 "</ul>\n" +
 
                 "<form method='get' action="+goBack+">"+
-                "<button type='submit'><h5>Go back</h5></button>"+
+                "<button type='submit'><h2>Go back</h2></button>"+
                 "</form>"+
                 "</body></html>");
-
-
-
 
 
 

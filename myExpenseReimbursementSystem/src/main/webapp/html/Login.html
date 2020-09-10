@@ -2,21 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     <title>Login</title>
 </head>
-<body>
+<body class="wrap">
 
-<fieldset>
-    <legend>Login</legend>
-    <form action="/myExpenseReimbursementSystem/Login" method="POST">
-        Login Type: <label for="emp">Employee </label><input type="radio" id="emp" name="usertype" value="Employee" checked>
-                    <label for="man">Manager </label><input type="radio" id="man" name="usertype" value="Manager">
-                    <label for="adm">Admin </label><input type="radio" id="adm" name="usertype" value="Admin"><br>
-        Username: <input class="form-control" type="text" name="username">
-        Password: <input class="form-control" type="password" name="password"><br>
-        <input type="submit" value="Login">
-        &nbsp;&nbsp;&nbsp;
+
+
+<fieldset class=" login-wrap">
+    <center>
+        <h1>Login</h1>
+    </center><br><br>
+
+    <form action="/myExpenseReimbursementSystem/Login" class="form-horizontal" role="form" method="POST">
+        <div class="form-group">
+        <h3>Login Type:</h3>
+        <br><label for="emp">Employee </label><input class="form-control" type="radio" id="emp" name="usertype" value="Employee" checked><br>
+                    <label for="man">Manager </label><input class="form-control" type="radio" id="man" name="usertype" value="Manager"><br>
+                    <label for="adm">Admin </label><input class="form-control" type="radio" id="adm" name="usertype" value="Admin"><br><br>
+
+
+        <div class="form-group">
+        Username: <input class="login-form" type="text" name="username">
+        </div>
+        <div class="form-group">
+        Password: <input class="login-form" type="password" name="password"><br>
+        </div>
+        <br>
+
+
+            <input class="login-input" type="submit" value="Login" style='font-size:25px'></div>
 
     </form>
 </fieldset>

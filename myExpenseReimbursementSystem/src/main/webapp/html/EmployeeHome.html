@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>EmployeeHome</title>
-    <link rel="stylesheet" type="text/css" href="./CSS/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="wrap">
 
-<h1>This is the Employee home screen!! </h1>
+<center class="login-title"><h1>Employee home screen </h1></center>
 
-<h1>My Reimbursement Requests</h1>
+<div class="container">
+<h3>My Reimbursement Requests</h3>
+</div>
 
-<div>
+<div class="container">
     Select view:
     <select onchange="changeView(this.value)">
         <option value="ShowAll">View all Requests</option>
@@ -21,8 +24,10 @@
 </div>
 <br>
 
+
+<div class="container">
 <table id="reqTable" class="table table-striped">
-    <thead class="thead-dark">
+    <thead class="thead-light">
     <tr>
         <th>Request Date</th>
         <th>Expense Date</th>
@@ -35,11 +40,20 @@
     <tbody id="reqTableBody">
     </tbody>
 </table>
+</div>
 
 
-<form method="get" action="EmployeeAddReimbursement.html">
-    <button type="submit"><h3>Add new Reimbursement</h3></button>
-</form><br><br>
+<div class="container">
+<form class="login-input" method="get" action="EmployeeAddReimbursement.html">
+    <button class="btn btn-primary" type="submit"><h4>Add new Reimbursement</h4></button>
+</form></div><br><br>
+
+
+<center>
+    <div class="container">
+        <form class="login-input" method="get" action="Login.html">
+            <button class="btn btn-primary" type="submit"><h4>Back to Login Screen</h4></button>
+        </form></div></center>
 
 
 <script src="../js/EmployeeView.js"></script>

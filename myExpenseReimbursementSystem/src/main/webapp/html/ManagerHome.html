@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>ManagerHome</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="wrap">
 
 
-<h1>This is the Manager home screen!! </h1>
+<center class="login-title"><h1>Manager home screen </h1></center>
 
-<h1>All Reimbursement Requests</h1>
+<h2 class="login-form">All Reimbursement Requests</h2>
 
-<div>
+<div class="container">
     Select view:
     <select onchange="changeView(this.value)">
         <option value="ShowAll">View all Requests</option>
@@ -21,8 +23,9 @@
 </div>
 <br>
 
+<div class="container">
 <table id="reqTable" class="table table-striped">
-    <thead class="thead-dark">
+    <thead class=class="thead-light">
     <tr>
         <th>Reimbursement ID</th>
         <th>Request Date</th>
@@ -36,13 +39,21 @@
     <tbody id="reqTableBody">
     </tbody>
 </table>
+</div>
 
 
+<div class="container">
 <form method="get" action="ManagerDecision.html">
-    <button type="submit"><h3>Make Decisions for pending Reimbursements</h3></button>
-</form><br><br>
+    <button type="submit" class="btn btn-primary">
+        <h3>Make Decisions for pending Reimbursements</h3></button>
+</form>
+    </div><br><br>
 
-
+<center>
+    <div class="container">
+        <form class="login-input" method="get" action="Login.html">
+            <button class="btn btn-primary" type="submit"><h4>Back to Login Screen</h4></button>
+        </form></div></center>
 
 
 <script src="../js/ManagerView.js"></script>

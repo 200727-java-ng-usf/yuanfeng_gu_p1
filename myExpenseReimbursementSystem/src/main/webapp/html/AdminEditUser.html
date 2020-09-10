@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <title>EditUser</title>
-
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<div class="wrap">
 
-<h2>Edit User Account</h2>
+<center class="login-title"><h1>Edit User Account</h1></center>
 
-
-
+    <div class="container">
 <form action="/myExpenseReimbursementSystem/AdminEditUser" method="GET">
-    Employeen ID : <input class="form-control" name="id"><br>
-    <input type="submit">
+    Employeen ID : <input name="id">
+    <input class="btn btn-primary" type="submit">
 </form>
+    </div>
 
 
 
 
 
-    <fieldset class="form-group" style="margin-left:20px">
-        <form action="/myExpenseReimbursementSystem/AdminEditUser" method="POST">
+
+        <div class="container">
+        <form class="form-horizontal" role="form" action="/myExpenseReimbursementSystem/AdminEditUser" method="POST">
+
             First Name:<br> <input type="text" name="firstname" required><br>
             Last Name:<br> <input type="text" name="lastname" required><br>
             User Name:<br> <input type="text" id="username" name="username" onchange="checkDuplicate(this.value)" required> <span id="dupeCheck"></span><br>
@@ -31,13 +34,19 @@
             <input type="radio" id="emp" name="roleType" value="Employee" checked>&nbsp;<label for="emp">Employee </label><br>
             <input type="radio" id="man" name="roleType" value="Manager">&nbsp;<label for="man">Manager</label><br>
             <input type="radio" id="adm" name="roleType" value="Admin">&nbsp; <label for="adm">Admin</label><br>
-            </div><br><br>
-
-            <input type="submit" id="submit">
+            <br><br>
+        <div class="container">
+            <input class="btn btn-primary" type="submit" id="submit">
+        </div>
         </form>
+        </div><br><br>
+<center>
+    <div class="container">
+        <form class="login-input" method="get" action="AdminHome.html">
+            <button class="btn btn-primary" type="submit"><h4>Back to Home Screen</h4></button>
+        </form></div></center>
 
 
-    </fieldset>
 
 <script src="../js/AdminViewById.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

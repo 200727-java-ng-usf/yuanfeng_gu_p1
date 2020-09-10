@@ -2,16 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Add Reimbursement Request</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
 </head>
-<body>
+<body class="wrap">
 
 
-<h1>Submit a Reimbursement Request</h1>
+<h1 class="login-title" >Submit a Reimbursement Request</h1>
 
-<fieldset class="form-group" style="margin-left:20px">
-    <form action="../SubmitReimbursement" method="POST" enctype="multipart/form-data">
+<fieldset class="container" style="margin-left:20px">
+    <form  action="../SubmitReimbursement" method="POST" enctype="multipart/form-data">
         Reimbursement Type:<br>
         <input type="radio" id="lodging" name="reimbursementType" value="lodging" checked>&nbsp;<label for="lodging">Lodging </label><br>
         <input type="radio" id="travel" name="reimbursementType" value="travel">&nbsp;<label for="travel">Travel</label><br>
@@ -20,9 +22,15 @@
         </div><br><br>
         Reimbursement Amount Requested:<br> $<input type="number" min="0.00" step="0.01" name="amount"><br>
         Description of Expense (150 character limit):<br> <textarea maxlength="150" name="description" rows="4" cols="50"></textarea><br>
-        <input type="submit">
+        <input class="btn btn-primary" type="submit">
     </form>
 </fieldset>
+
+
+<div class="container">
+    <form class="login-input" method="get" action="EmployeeHome.html">
+        <button class="btn btn-primary" type="submit"><h4>Back to Employee Home Screen</h4></button>
+    </form></div>
 
 
 

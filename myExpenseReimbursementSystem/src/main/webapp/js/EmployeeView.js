@@ -49,7 +49,7 @@ for(let i=0;i<requestArr.length;i++){
 		newRow.innerHTML =
 		 "<td>" + new Date(parseInt(requestArr[i].dateSubmitted)).toLocaleDateString()+ "</td>" +
 		  "<td>" + new Date(parseInt(requestArr[i].resolvedDate)).toLocaleDateString()+ "</td>" +
-		  "<td>" + requestArr[i].amount + "</td>" +
+		  "<td>"+" $ " + requestArr[i].amount + "</td>" +
 		   "<td>" + requestArr[i].description + "</td>" +
 		   "<td>" + requestArr[i].statusId + "</td>" +
 		    "<td>" + requestArr[i].resolverId + "</td>";
