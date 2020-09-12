@@ -6,6 +6,7 @@ import com.revature.models.User;
 import com.revature.services.ReimbursementService;
 import com.revature.services.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
@@ -71,25 +72,29 @@ public class EmployeeAddReimServlet extends HttpServlet {
         String title = "Successfully added New Reimbursement ";
         String goBack = "html/EmployeeHome.html";
 
-        String docType = "<!DOCTYPE html> \n";
-        out.println(docType +
-                "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#3366ff\">\n" +
-                "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<ul>\n" +
-                "  <li><b>Reimbursement Amount</b>:<h2>"
-                + newReimbursement.getAmount() + "</h2>\n" +
-                "  <li><b>Reimbursement Type</b>:<h2>"
-                + req.getParameter("reimbursementType") + "</h2>\n" +
-                "  <li><b>Reimbursement submitted Date</b>:<h2>"
-                + newReimbursement.getDateSubmitted() + "</h2>\n" +
-                "</ul>\n" +
 
-                "<form method='get' action="+goBack+">"+
-                "<button type='submit'><h2>Go back</h2></button>"+
-                "</form>"+
-                "</body></html>");
+        out.println(
+                "<h1 align=\"center\">" + title + "</h1>\n" +
+                        "<ul>\n" +
+                        "  <li><b>Reimbursement Amount</b>:<h2>"
+                        + newReimbursement.getAmount() + "</h2>\n" +
+                        "  <li><b>Reimbursement Type</b>:<h2>"
+                        + req.getParameter("reimbursementType") + "</h2>\n" +
+                        "  <li><b>Reimbursement submitted Date</b>:<h2>"
+                        + newReimbursement.getDateSubmitted() + "</h2>\n" +
+                        "</ul>\n" +
+
+                        "<form method='get' action="+goBack+">"+
+                        "<button type='submit'><h2>Go back</h2></button>"+
+                        "</form>");
+        RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
+        try {
+            rd.include(req, resp);
+        } catch (ServletException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        out.close();
 
 
 

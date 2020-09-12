@@ -73,41 +73,47 @@ public class ManagerDecisionServlet extends HttpServlet {
             String title = "Successfully added New Reimbursement ";
             String goBack = "html/ManagerHome.html";
 
-            String docType = "<!DOCTYPE html> \n";
-            out.println(docType +
-                    "<html>\n" +
-                    "<head><title>" + title + "</title></head>\n" +
-                    "<body bgcolor=\"#3366ff\">\n" +
+            out.println(
                     "<h1 align=\"center\">" + title + "</h1>\n" +
-                    " <h2 align=\"center\">Reimbursement has been Has been approved</h2><\n"+
-                    "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
-                    + reimId + "</h2>\n" +
+                            " <h2 align=\"center\">Reimbursement has been Has been approved</h2><\n"+
+                            "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
+                            + reimId + "</h2>\n" +
 
-                    "<form method='get' action="+goBack+">"+
-                    "<button type='submit'><h2>Go back</h2></button>"+
-                    "</form>"+
-                    "</body></html>");
+                            "<form method='get' action="+goBack+">"+
+                            "<button type='submit'><h2>Go back</h2></button>"+
+                            "</form>");
+            RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
+            try {
+                rd.include(req, resp);
+            } catch (ServletException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            out.close();
 
         }else {
 
-        resp.setContentType("text/html");
-        String title = "Reimbursement rejected ";
-        String goBack = "html/ManagerHome.html";
+            resp.setContentType("text/html");
+            String title = "Reimbursement rejected ";
+            String goBack = "html/ManagerHome.html";
 
-        String docType = "<!DOCTYPE html> \n";
-        out.println(docType +
-                "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#3366ff\">\n" +
-                "<h1 align=\"center\">" + title + "</h1>\n" +
-                " <h2 align=\"center\">Reimbursement has been Has been rejected</h2><\n"+
-                "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
-                + reimId + "</h2>\n" +
+            out.println(
+                    "<h1 align=\"center\">" + title + "</h1>\n" +
+                            " <h2 align=\"center\">Reimbursement has been Has been rejected</h2><\n"+
+                            "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
+                            + reimId + "</h2>\n" +
 
-                "<form method='get' action="+goBack+">"+
-                "<button type='submit'><h2>Go back</h2></button>"+
-                "</form>"+
-                "</body></html>");
+                            "<form method='get' action="+goBack+">"+
+                            "<button type='submit'><h2>Go back</h2></button>"+
+                            "</form>");
+            RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
+            try {
+                rd.include(req, resp);
+            } catch (ServletException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            out.close();
         }
 
 

@@ -91,31 +91,35 @@ public class AdminEditUserServlet extends HttpServlet {
         String title = "Successfully Edited User Infomation ";
         String goBack = "html/AdminHome.html";
 
-        String docType = "<!DOCTYPE html> \n";
-        out.println(docType +
-                "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#f0f0f0\">\n" +
-                "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<ul>\n" +
-                "  <li><b>Account username</b>:"
-                + editUser.getUsername() + "\n" +
-                "  <li><b>Account default password</b>:"
-                + editUser.getPassword() + "\n" +
-                "  <li><b>User first name</b>:"
-                + editUser.getFirstName() + "\n" +
-                "  <li><b>User last name</b>:"
-                + editUser.getLastName() + "\n" +
-                "  <li><b>User Email</b>:"
-                + editUser.getEmail() + "\n" +
-                "  <li><b>User role type</b>:"
-                + req.getParameter("roleType") + "\n" +
-                "</ul>\n" +
 
-                "<form method='get' action="+goBack+">"+
-                "<button type='submit'><h5>Go back</h5></button>"+
-                "</form>"+
-                "</body></html>");
+        out.println(
+                "<h1 align=\"center\">" + title + "</h1>\n" +
+                        "<ul>\n" +
+                        "  <li><b>Account username</b>:"
+                        + editUser.getUsername() + "\n" +
+                        "  <li><b>Account default password</b>:"
+                        + editUser.getPassword() + "\n" +
+                        "  <li><b>User first name</b>:"
+                        + editUser.getFirstName() + "\n" +
+                        "  <li><b>User last name</b>:"
+                        + editUser.getLastName() + "\n" +
+                        "  <li><b>User Email</b>:"
+                        + editUser.getEmail() + "\n" +
+                        "  <li><b>User role type</b>:"
+                        + req.getParameter("roleType") + "\n" +
+                        "</ul>\n" +
+
+                        "<form method='get' action="+goBack+">"+
+                        "<button type='submit'><h5>Go back</h5></button>"+
+                        "</form>");
+        RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
+        try {
+            rd.include(req, resp);
+        } catch (ServletException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        out.close();
     }
 
 }

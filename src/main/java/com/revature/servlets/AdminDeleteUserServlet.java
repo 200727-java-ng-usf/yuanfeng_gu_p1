@@ -4,6 +4,7 @@ package com.revature.servlets;
 import com.revature.models.User;
 import com.revature.services.UserService;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -48,29 +49,32 @@ public class AdminDeleteUserServlet extends HttpServlet {
         String title = "Successfully Deleted Account ";
         String goBack = "html/AdminHome.html";
 
-        String docType = "<!DOCTYPE html> \n";
-        out.println(docType +
-                "<html>\n" +
-                "<head><title>" + title + "</title></head>\n" +
-                "<body bgcolor=\"#f0f0f0\">\n" +
+        out.println(
                 "<h1 align=\"center\">" + title + "</h1>\n" +
-                "<ul>\n" +
-                "  <li><b>Account username</b>:"
-                + delUser.getUsername() + "\n" +
-                "  <li><b>Account default password</b>:"
-                + delUser.getPassword() + "\n" +
-                "  <li><b>User first name</b>:"
-                + delUser.getFirstName() + "\n" +
-                "  <li><b>User last name</b>:"
-                + delUser.getLastName() + "\n" +
-                "  <li><b>User role type</b>:"
-                + req.getParameter("roleType") + "\n" +
-                "</ul>\n" +
+                        "<ul>\n" +
+                        "  <li><b>Account username</b>:"
+                        + delUser.getUsername() + "\n" +
+                        "  <li><b>Account default password</b>:"
+                        + delUser.getPassword() + "\n" +
+                        "  <li><b>User first name</b>:"
+                        + delUser.getFirstName() + "\n" +
+                        "  <li><b>User last name</b>:"
+                        + delUser.getLastName() + "\n" +
+                        "  <li><b>User role type</b>:"
+                        + req.getParameter("roleType") + "\n" +
+                        "</ul>\n" +
 
-                "<form method='get' action="+goBack+">"+
-                "<button type='submit'><h5>Go back</h5></button>"+
-                "</form>"+
-                "</body></html>");
+                        "<form method='get' action="+goBack+">"+
+                        "<button type='submit'><h5>Go back</h5></button>"+
+                        "</form>");
+        RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
+        try {
+            rd.include(req, resp);
+        } catch (ServletException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        out.close();
     }
 
 
