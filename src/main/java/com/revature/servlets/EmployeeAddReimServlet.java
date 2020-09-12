@@ -85,7 +85,7 @@ public class EmployeeAddReimServlet extends HttpServlet {
                         "</ul>\n" +
 
                         "<form method='get' action="+goBack+">"+
-                        "<button type='submit'><h2>Go back</h2></button>"+
+                        "<button class= 'btn btn-primary' type='submit'><h2>Go back</h2></button>"+
                         "</form>");
         RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
         try {

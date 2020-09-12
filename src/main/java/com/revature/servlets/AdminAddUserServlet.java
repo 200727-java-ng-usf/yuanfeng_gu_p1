@@ -69,7 +69,7 @@ public class AdminAddUserServlet extends HttpServlet {
                         "</ul>\n" +
 
                         "<br><br><form method='get' action="+goBack+">"+
-                        "<button type='submit'><h5>Go back</h5></button>"+
+                        "<button class= 'btn btn-primary' type='submit'><h5>Go back</h5></button>"+
                         "</form>");
 
         RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");

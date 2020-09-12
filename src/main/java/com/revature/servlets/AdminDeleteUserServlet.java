@@ -65,7 +65,7 @@ public class AdminDeleteUserServlet extends HttpServlet {
                         "</ul>\n" +
 
                         "<form method='get' action="+goBack+">"+
-                        "<button type='submit'><h5>Go back</h5></button>"+
+                        "<button class= 'btn btn-primary' type='submit'><h5>Go back</h5></button>"+
                         "</form>");
         RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
         try {
