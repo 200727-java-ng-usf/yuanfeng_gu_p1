@@ -54,21 +54,21 @@ public class AdminAddUserServlet extends HttpServlet {
 
         out.println(
                 "<h1 align=\"center\">" + title + "</h1>\n" +
-                        " <b>Account username</b>:"
-                        + newUser.getUsername() + "\n" +
-                        " <b>Account default password</b>:"
-                        + newUser.getPassword() + "\n" +
-                        " <b>User first name</b>:"
-                        + newUser.getFirstName() + "\n" +
-                        " <b>User last name</b>:"
-                        + newUser.getLastName() + "\n" +
-                        " <b>User Email</b>:"
-                        + newUser.getEmail() + "\n" +
-                        " <b>User role type</b>:"
-                        + req.getParameter("roleType") + "\n" +
+                        " <b>Account username</b>:   "+
+                            newUser.getUsername() +
+                        " \n<b>Account default password</b>:   "
+                        + newUser.getPassword() +
+                        " \n<b>User first name</b>:   "
+                        + newUser.getFirstName() +
+                        " \n<b>User last name</b>:   "
+                        + newUser.getLastName() +
+                        " \n<b>User Email</b>:"
+                        + newUser.getEmail() +
+                        " \n<b>User role type</b>:  "
+                        + req.getParameter("roleType") +
                         "</ul>\n" +
 
-                        "<form method='get' action="+goBack+">"+
+                        "<br><br><form method='get' action="+goBack+">"+
                         "<button type='submit'><h5>Go back</h5></button>"+
                         "</form>");
 
