@@ -75,7 +75,7 @@ public class ManagerDecisionServlet extends HttpServlet {
 
             out.println(
                     "<h1 align=\"center\">" + title + "</h1>\n" +
-                            " <h2 align=\"center\">Reimbursement has been Has been approved</h2><\n"+
+                            " <h2 align=\"center\">Reimbursement has been approved</h2>\n"+
                             "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
                             + reimId + "</h2>\n" +
 
@@ -99,12 +99,12 @@ public class ManagerDecisionServlet extends HttpServlet {
 
             out.println(
                     "<h1 align=\"center\">" + title + "</h1>\n" +
-                            " <h2 align=\"center\">Reimbursement has been Has been rejected</h2><\n"+
+                            " <h2 align=\"center\">Reimbursement has been rejected</h2>\n"+
                             "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
                             + reimId + "</h2>\n" +
 
                             "<form method='get' action="+goBack+">"+
-                            "<button type='submit'><h2>Go back</h2></button>"+
+                            "<button type='submit' class='btn btn-primary'><h2>Go back</h2></button>"+
                             "</form>");
             RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
             try {
