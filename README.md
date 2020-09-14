@@ -57,10 +57,29 @@
 ###### 2. some details still need be optimized
 ###### 3. need Css and bootstrap
 
+
+---------------------------------------------------------------------
+
 ### Sep 10 update
 ### Version 1.0 Completed
 
 ###### 1. new version was deployed to running EC2 instances   
 ###### 2. all functions works and tested 
 ###### 3. I will redo the most of front and sverlets layer 
+
+
+---------------------------------------------------------------------
+
+
+### Sep 12 update
+### Version 1.1 Completed
+
+###### 1. Add NavBar for each group of user 
+###### 2. Add New function 'Reset Password' for Employee
+###### 3. Real Sign Out function clear the session for user 
+###### 4. All new function tested by User 
+
+---------------------------------------------------------------------
+
+## Project_1 is Completed
 
