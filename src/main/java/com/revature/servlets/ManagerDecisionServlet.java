@@ -70,17 +70,17 @@ public class ManagerDecisionServlet extends HttpServlet {
         if(statusId==1){
 
             resp.setContentType("text/html");
-            String title = "Successfully added New Reimbursement ";
+            String title = "Successfully Submitted ";
             String goBack = "html/ManagerHome.html";
 
             out.println(
                     "<h1 align=\"center\">" + title + "</h1>\n" +
-                            " <h2 align=\"center\">Reimbursement has been approved</h2>\n"+
-                            "  <h2 align=\"center\">Reimbursement ID: </h2><h2>"
-                            + reimId + "</h2>\n" +
+                            " <h3 align=\"center\">Reimbursement has been approved</h3>\n"+
+                            "  <h3 align=\"center\">Reimbursement ID: </h3><h3>"
+                            + reimId + "</h3>\n" +
 
                             "<form method='get' action="+goBack+">"+
-                            "<button type='submit'><h2>Go back</h2></button>"+
+                            "<br><button class='btn btn-primary' type='submit'><h3>Go back</h3></button>"+
                             "</form>");
             RequestDispatcher rd = req.getRequestDispatcher("html/BG.html");
             try {
