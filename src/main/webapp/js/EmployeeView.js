@@ -33,6 +33,9 @@ table.appendChild(newBody);
 
 console.log(requestArr);
 
+requestArr.sort(function(x, y){
+    return x.timestamp - y.timestamp;
+})
 
 for(let i=0;i<requestArr.length;i++){
           var status;
