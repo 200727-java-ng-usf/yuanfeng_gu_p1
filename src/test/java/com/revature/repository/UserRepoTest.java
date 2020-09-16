@@ -75,10 +75,10 @@ public class UserRepoTest {
 //        }
 //    }
 //
-//    @Test
-//    public void deleteUser() {
-//        testRepo.deleteUser("tony");
-//    }
+    @Test
+    public void deleteUser() {
+        testRepo.deleteUser("linda7");
+    }
 //
 //    @Test
 //    public void editUser() {

@@ -50,4 +50,8 @@ public class ReimbursementService {
         reimbursementRepo.decisionOfReimbursement(resolverId,statusId,reimbId);
     }
 
+    public void deleteReimbursement(int authorId){
+        reimbursementRepo.deleteReimbursement(authorId);
+    }
+
 }

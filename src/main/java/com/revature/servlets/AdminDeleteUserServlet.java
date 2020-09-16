@@ -1,7 +1,9 @@
 package com.revature.servlets;
 
 
+import com.revature.exceptions.InvalidRequestException;
 import com.revature.models.User;
+import com.revature.services.ReimbursementService;
 import com.revature.services.UserService;
 
 import javax.servlet.RequestDispatcher;
@@ -17,10 +19,12 @@ import java.io.PrintWriter;
 public class AdminDeleteUserServlet extends HttpServlet {
 
     UserService userService;
+    ReimbursementService reimbursementService;
     User delUser;
 
     public AdminDeleteUserServlet() {
         userService = new UserService();
+        reimbursementService = new ReimbursementService();
     }
 
     @Override
@@ -41,6 +45,11 @@ public class AdminDeleteUserServlet extends HttpServlet {
         delUser.setLastName(req.getParameter("lastname"));
         delUser.setRole(role);
 
+        try {
+            reimbursementService.deleteReimbursement(userService.findUserByUsername(delUser.getUsername()).getId());
+        } catch (InvalidRequestException e) {
+            e.printStackTrace();
+        }
         userService.deleteUser(delUser.getUsername());
 
 

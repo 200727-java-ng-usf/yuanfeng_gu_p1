@@ -213,7 +213,19 @@ public class ReimbursementRepo {
     }
 
 
+    public void deleteReimbursement(int authorId){
 
+        try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
+
+            String sql = "delete from \"reimbursementSys\".ers_reimbursements er where author_id = ? ";
+            PreparedStatement psmt = conn.prepareStatement(sql);
+            psmt.setInt(1, authorId);
+            psmt.execute();
+
+        }catch (SQLException sqle) {
+            sqle.printStackTrace();
+        }
+    }
 
 
 
