@@ -73,7 +73,7 @@ public class ReimbursementRepo {
         Set<Reimbursement>  reimbursements = new HashSet<>();
         try (Connection conn = ConnectionFactory.getInstance().getConnection()) {
 
-            String sql = "select  * from \"reimbursementSys\".ers_reimbursements er WHERE reimb_status_id = 1";
+            String sql = "select  * from \"reimbursementSys\".ers_reimbursements er WHERE reimb_status_id < 2 ";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             ResultSet rs = pstmt.executeQuery();
             reimbursements = mapResultSet(rs);
