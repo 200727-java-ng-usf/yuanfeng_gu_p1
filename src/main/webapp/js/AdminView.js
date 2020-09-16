@@ -9,7 +9,7 @@ const createOnStartUp = () => {
 }
 
 const sendAjaxGet = (url, func) => {
-	//ActiveXObject for IE9 and older compatibility
+
 	let xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft.HTTPRequest");
 	xhr.onreadystatechange = function() {
 		if (this.readyState==4 && this.status==200) {
@@ -33,6 +33,8 @@ let table = document.getElementById("empTable");
 	let newBody = document.createElement("tbody");
 	newBody.setAttribute("id", "empList");
 	table.appendChild(newBody);
+
+	requestArr.sort();
 
 
 for(let i=0;i<requestArr.length;i++){
