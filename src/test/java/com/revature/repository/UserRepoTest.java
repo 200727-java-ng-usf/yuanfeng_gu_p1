@@ -62,10 +62,10 @@ public class UserRepoTest {
 //
 //    }
 //
-//    @Test
-//    public void save() {
-//        testRepo.save(new User("tony","1111","tony","parker","tony.parker@hotmail.com",1));
-//    }
+    @Test
+    public void save() {
+        testRepo.save(new User("tony","1111","tony","parker","tony.parker@hotmail.com",1));
+    }
 //
 //    @Test
 //    public void findRole() {
@@ -77,7 +77,7 @@ public class UserRepoTest {
 //
     @Test
     public void deleteUser() {
-        testRepo.deleteUser("linda7");
+        testRepo.deleteUser("tony");
     }
 //
 //    @Test

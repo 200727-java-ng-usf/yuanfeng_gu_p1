@@ -38,7 +38,7 @@ requestArr.sort(function(x, y){
 })
 
 for(let i=0;i<requestArr.length;i++){
-          var status;
+          let status;
          if(requestArr[i].statusId == 1){ status = "Approved"}else if(requestArr[i].statusId == 0){
          status = "Denied"}else{  status = "Pending"}
 
