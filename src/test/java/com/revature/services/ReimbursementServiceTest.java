@@ -43,21 +43,17 @@
 //    @Test
 //    public void findAllReimbursementsForIndividual() {
 //        assertTrue(reimbursementService.findAllReimbursementsForIndividual(1).stream().findFirst().isPresent());
-//        assertEquals(420.00,420.0,reimbursementService.findAllReimbursementsForIndividual(1).stream().findFirst().get().getAmount());
 //    }
 //
 //    @Test
 //    public void findAllPendingReimbursementsForIndividual() {
-//        //assertTrue(reimbursementService.findAllPendingReimbursementsForIndividual(1).stream().findFirst().isPresent());
-//        //assertEquals(300.0,300.0,reimbursementService.findAllPendingReimbursementsForIndividual(1).stream().findFirst().get().getAmount());
+//        assertTrue(reimbursementService.findAllPendingReimbursementsForIndividual(1).stream().findFirst().isPresent());
 //
 //    }
 //
 //    @Test
 //    public void findAllResolvedReimbursementsForIndividual() {
 //        assertTrue(reimbursementService.findAllResolvedReimbursementsForIndividual(1).stream().findFirst().isPresent());
-//        assertEquals(420.00,420.0,reimbursementService.findAllResolvedReimbursementsForIndividual(1).stream().findFirst().get().getAmount());
-//
 //
 //    }
 //
@@ -70,20 +66,17 @@
 //    public void getPendingReimbursements() {
 //
 //        assertFalse(reimbursementService.getPendingReimbursements().isEmpty());
-//        assertEquals(300.0,300.0,reimbursementService.getPendingReimbursements().stream().findFirst().get().getAmount());
 //    }
 //
 //    @Test
 //    public void getResolvedReimbursements() {
 //        assertFalse(reimbursementService.getResolvedReimbursements().isEmpty());
-//        assertEquals(420.00,420.0,reimbursementService.getResolvedReimbursements().stream().findFirst().get().getAmount());
+//
 //    }
 //
 //    @Test
 //    public void testFindAllReimbursements() {
 //        assertTrue(reimbursementService.findAllReimbursements().stream().findFirst().isPresent());
-//        assertEquals(420.00,420.0,reimbursementService.findAllReimbursements().stream().findFirst().get().getAmount());
-//
 //
 //    }
 //
@@ -93,8 +86,8 @@
 //    }
 //
 //
-//    @Test
-//    public void decisionOfReimbursement() {
-//        mockService.decisionOfReimbursement(2,1,2);
+//   @Test
+//   public void decisionOfReimbursement() {
+//      mockService.decisionOfReimbursement(2,1,2);
 //    }
 //}

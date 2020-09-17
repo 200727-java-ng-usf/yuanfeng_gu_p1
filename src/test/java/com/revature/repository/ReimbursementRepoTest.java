@@ -1,39 +1,39 @@
-package com.revature.repository;
-
-import com.revature.models.Reimbursement;
-import com.revature.models.User;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import java.sql.Timestamp;
-import java.util.HashSet;
-import java.util.Set;
-
-import static org.junit.Assert.*;
-
-public class ReimbursementRepoTest {
-
-    ReimbursementRepo testRepo;
-    Reimbursement testReimbursement;
-    Set<Reimbursement> reimbursementsSet;
-
-    @Before
-    public void setUp() throws Exception {
-        testRepo = new ReimbursementRepo();
-        testReimbursement = new Reimbursement();
-        reimbursementsSet = new HashSet<>();
-
-    }
-
-    @After
-    public void tearDown() throws Exception {
-
-        testReimbursement = null;
-        testRepo =null;
-        reimbursementsSet = null;
-
-    }
+//package com.revature.repository;
+//
+//import com.revature.models.Reimbursement;
+//import com.revature.models.User;
+//import org.junit.After;
+//import org.junit.Before;
+//import org.junit.Test;
+//
+//import java.sql.Timestamp;
+//import java.util.HashSet;
+//import java.util.Set;
+//
+//import static org.junit.Assert.*;
+//
+//public class ReimbursementRepoTest {
+//
+//    ReimbursementRepo testRepo;
+//    Reimbursement testReimbursement;
+//    Set<Reimbursement> reimbursementsSet;
+//
+//    @Before
+//    public void setUp() throws Exception {
+//        testRepo = new ReimbursementRepo();
+//        testReimbursement = new Reimbursement();
+//        reimbursementsSet = new HashSet<>();
+//
+//    }
+//
+//    @After
+//    public void tearDown() throws Exception {
+//
+//        testReimbursement = null;
+//        testRepo =null;
+//        reimbursementsSet = null;
+//
+//    }
 
 //    @Test
 //    public void findAllReimbursements() {
@@ -101,4 +101,4 @@ public class ReimbursementRepoTest {
 //        testReimbursement = testRepo.findReimbursementByReimbId(1).get();
 //        System.out.println(testReimbursement);
 //    }
-}
+//}

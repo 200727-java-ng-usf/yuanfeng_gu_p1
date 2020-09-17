@@ -22,7 +22,7 @@
 //    @Before
 //    public void setUp() throws Exception {
 //
-//        testUser = new User();
+//
 //        mockService = Mockito.mock(UserService.class);
 //        mockRepo = Mockito.mock(UserRepo.class);
 //        userService = new UserService();
@@ -54,7 +54,6 @@
 //    @Test
 //    public void findAllUser() {
 //      assertTrue(userService.findAllUser().stream().findFirst().isPresent());
-//        assertEquals("shen","shen",userService.findAllUser().stream().findFirst().get().getLastName());
 //    }
 //
 //    @Test
@@ -72,18 +71,24 @@
 //
 //    @Test
 //    public void testAddUser() {
-//        mockService.addUser(testUser);
+//        testUser = new User("test","test","test","test","test@hotmail.com",1);
+//        userService.addUser(testUser);
+//        userService.editUser("test","bbb","ccc@dsds",2,testUser.getId());
+//        userService.deleteUser("test");
 //
 //    }
-//
-//    @Test
-//    public void deleteUser() {
-//        mockService.deleteUser("testUser");
-//    }
-//
+
+
 //    @Test
 //    public void editUser() {
 //
-//        mockService.editUser("aaa","bbb","ccc@dsds",2,2);
+//        userService.editUser("test","bbb","ccc@dsds",2,testUser.getId());
 //    }
+//
+//
+//    @Test
+//    public void deleteUser() {
+//        userService.deleteUser("test");
+//    }
+
 //}
